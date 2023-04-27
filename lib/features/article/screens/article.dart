@@ -16,9 +16,9 @@ class _ArticleState extends State<Article> {
     return ListView(
       padding: const EdgeInsets.all(25),
       children: <Widget>[
-        cardArticle(images[0]),
-        cardArticle(images[1]),
-        cardArticle(images[2]),
+        cardArticle(context, images[0]),
+        cardArticle(context, images[1]),
+        cardArticle(context, images[2]),
       ],
     );
   }
