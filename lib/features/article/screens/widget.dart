@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 Widget cardArticle(context, Map article) {
   return Stack(children: [
     Container(
-      width: 600,
-      height: 250,
+      width: 1800,
+      height: 280,
       child: Image.asset(article['image']),
     ),
     Container(

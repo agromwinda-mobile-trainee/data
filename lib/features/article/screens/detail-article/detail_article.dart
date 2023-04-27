@@ -1,3 +1,4 @@
+import 'package:datatv/features/article/data/local_data.dart';
 import 'package:flutter/material.dart';
 
 class DetailArticle extends StatelessWidget {
@@ -8,26 +9,20 @@ class DetailArticle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Row(
-          //mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(
-              Icons.menu,
-              size: 35,
-              color: Colors.black,
-            ),
-            const Padding(
-              padding: EdgeInsets.only(left: 100),
-            ),
-            Center(
-                child: Image.asset(
-              'assets/img/logoo.png',
-              fit: BoxFit.contain,
-              height: 42,
-            )),
-          ],
+        backgroundColor: const Color.fromARGB(255, 247, 245, 245),
+        leading: GestureDetector(
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.blue,
+            size: 18,
+          ),
+          onTap: () {
+            Navigator.pop(context);
+          },
         ),
+      ),
+      body:Container(    
+        
       ),
     );
   }
