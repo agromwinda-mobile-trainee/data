@@ -1,5 +1,8 @@
 import 'package:datatv/features/article/data/local_data.dart';
+import 'package:datatv/features/article/screens/article.dart';
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:datatv/features/article/screens/detail-article/caroussel_application.dart';
 
 class DetailArticle extends StatelessWidget {
   const DetailArticle({super.key, required this.article});
@@ -21,9 +24,7 @@ class DetailArticle extends StatelessWidget {
           },
         ),
       ),
-      body:Container(    
-        
-      ),
+      body: Carousel(images: article["images"]),
     );
   }
 }

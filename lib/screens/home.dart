@@ -19,16 +19,16 @@ class _HomescreenState extends State<Homescreen> {
             labelColor: Colors.blue,
             tabs: [
               Tab(
+                text: 'EN DIRECT',
+              ),
+              Tab(
                 text: 'A LA UNE',
               ),
               Tab(
-                text: '#AFGHANISTAN',
+                text: 'ARTICLE',
               ),
               Tab(
-                text: '#EURO-2021',
-              ),
-              Tab(
-                text: '#TOUR',
+                text: 'RECAP',
               ),
             ],
           ),
