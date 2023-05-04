@@ -15,18 +15,12 @@ class Carousel extends StatefulWidget {
 class _CarouselState extends State<Carousel> {
   late PageController _pageController;
 
-  //  List<String> images = [
-  //  "assets/img/quatre.jpg",
-  //  "assets/img/six.jpg",
-  //   "assets/img/cinq.jpg"
-  // ];
-
   int activePage = 1;
 
   @override
   void initState() {
     super.initState();
-    _pageController = PageController(viewportFraction: 0.8, initialPage: 1);
+    _pageController = PageController(viewportFraction: 1, initialPage: 1);
   }
 
   @override
@@ -66,7 +60,7 @@ AnimatedContainer slider(images, pagePosition, active) {
     curve: Curves.easeInOutCubic,
     margin: EdgeInsets.all(margin),
     decoration: BoxDecoration(
-        image: DecorationImage(image: NetworkImage(images[pagePosition]))),
+        image: DecorationImage(image: AssetImage(images[pagePosition]))),
   );
 }
 
@@ -84,7 +78,7 @@ imageAnimation(PageController animation, images, pagePosition) {
     },
     child: Container(
       margin: EdgeInsets.all(10),
-      child: Image.network(images[pagePosition]),
+      child: Image.asset(images[pagePosition]),
     ),
   );
 }

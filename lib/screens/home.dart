@@ -1,5 +1,7 @@
 import 'package:datatv/features/article/screens/article.dart';
 import 'package:flutter/material.dart';
+import 'package:datatv/features/streaming/screens/interface.dart';
+import 'package:http/http.dart' as http;
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -19,6 +21,10 @@ class _HomescreenState extends State<Homescreen> {
             labelColor: Colors.blue,
             tabs: [
               Tab(
+                icon: Icon(
+                  Icons.podcasts_rounded,
+                  color: Colors.red,
+                ),
                 text: 'EN DIRECT',
               ),
               Tab(
@@ -54,8 +60,8 @@ class _HomescreenState extends State<Homescreen> {
           ),
           backgroundColor: Colors.white,
         ),
-        body: const TabBarView(children: [
-          Article(),
+        body: TabBarView(children: [
+          ButterFlyAssetVideo(),
           Article(),
           Article(),
           Article(),

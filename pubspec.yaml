@@ -38,6 +38,8 @@ dependencies:
   dependencies:
   http: ^0.13.5
   carousel_slider: ^4.2.1
+  video_player: ^2.6.1 
+  fijkplayer: ^0.10.0
 
 dev_dependencies:
   flutter_test:
@@ -65,6 +67,7 @@ flutter:
   # assets:
   assets:
     - assets/img/
+    - assets/video/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
