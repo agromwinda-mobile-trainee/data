@@ -1,7 +1,9 @@
 import 'package:datatv/features/article/screens/article.dart';
+import 'package:datatv/features/streaming/screens/homescreen.dart';
 import 'package:flutter/material.dart';
-import 'package:datatv/features/streaming/screens/interface.dart';
 import 'package:http/http.dart' as http;
+
+import 'darkmode.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -56,12 +58,16 @@ class _HomescreenState extends State<Homescreen> {
                 fit: BoxFit.contain,
                 height: 42,
               )),
+              const Padding(
+                padding: EdgeInsets.only(left: 100),
+              ),
             ],
           ),
+          // actions: [IconButton(onPressed: null, icon: Icon(Icons.color_lens))],
           backgroundColor: Colors.white,
         ),
-        body: TabBarView(children: [
-          ButterFlyAssetVideo(),
+        body: const TabBarView(children: [
+          Homescreens(),
           Article(),
           Article(),
           Article(),

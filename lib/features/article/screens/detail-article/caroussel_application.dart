@@ -56,7 +56,7 @@ AnimatedContainer slider(images, pagePosition, active) {
   double margin = active ? 10 : 20;
 
   return AnimatedContainer(
-    duration: Duration(milliseconds: 500),
+    duration:const Duration(milliseconds: 500),
     curve: Curves.easeInOutCubic,
     margin: EdgeInsets.all(margin),
     decoration: BoxDecoration(
@@ -77,7 +77,7 @@ imageAnimation(PageController animation, images, pagePosition) {
       );
     },
     child: Container(
-      margin: EdgeInsets.all(10),
+      margin:const EdgeInsets.all(10),
       child: Image.asset(images[pagePosition]),
     ),
   );
@@ -86,7 +86,7 @@ imageAnimation(PageController animation, images, pagePosition) {
 List<Widget> indicators(imagesLength, currentIndex) {
   return List<Widget>.generate(imagesLength, (index) {
     return Container(
-      margin: EdgeInsets.all(3),
+      margin:const EdgeInsets.all(3),
       width: 10,
       height: 10,
       decoration: BoxDecoration(
